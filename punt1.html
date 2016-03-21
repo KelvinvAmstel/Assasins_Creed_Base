@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>POI</title>
+    <link href='https://fonts.googleapis.com/css?family=Signika:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,400italic,500italic,500,300italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+    <script src="js/lib/underscore-min.js" type="text/javascript"></script>
+    <script src="js/lib/geo-min.js" type="text/javascript"></script>
+    <script src="js/src/cmdgeo-0.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    // Laad het settings bestand in
+    cmdgeo.loadSettings('sandbox.json');
+
+    // Start met GPS-tracking
+    cmdgeo.track();
+
+    // Koppel het inladen van de google-maps kaart na het laden van de gehele pagina
+    window.onload = cmdgeo.loadmap;
+
+    </script>
+</head>
+<body>
+    <section id="map_canvas"></section>
+    <header class="popup">
+       <h2>Assassins Creed Base</h2>
+        <img src="img/menu.png"s id="menu">
+        <nav class="hidden">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a class="lock" href="map.html"><li>Map</li></a>
+                <a href="collection.html"><li>Collection</li></a>
+                <a href="connect.html"><li>Connect</li></a>
+                <a href="profile.html"><li>Profile</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="popup">
+        <p><span class="ASB">De Domkerk</span></p>
+        <p>Voeger hebben hier vele gebeurtenissen zich afgespeeld. Bekijk je collectie, ontrafel het symbool en kom meer te weten over deze locatie.</p>
+        <img class="small" src="img/heel_domtoren.jpg">
+        <p>Deze kerk was ooit één geheel, maar door een wervelstorm is er een middenstuk tussenuit weggevaagd. Of heeft er toch iets anders afgespeeld wat de oorzak hiervan was?</p>
+        <p>Loop weg en wordt incognito om deze pop-up te sluiten.</p>
+        <p><a href="https://www.facebook.com"><img src="img/button_share_location.png"></a></p>
+        <p><a href="https://nl.wikipedia.org/wiki/Dom_van_Utrecht"><img src="img/button_more_info.png"></a></p>
+    </main>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

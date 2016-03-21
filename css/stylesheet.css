@@ -1,0 +1,623 @@
+@font-face {
+    font-family: 'Assassin$';
+    src: url(Assassin$.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    color: #aed2d0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 140%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Text markup; size/wieght*/
+p{
+    font-size: 16pt;
+    font-weight: 300;
+}
+
+h1{
+    font-size: 1.75em;
+}
+
+h2{
+    color: white;
+    font-family: 'Assassin$';
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 18pt;
+}
+
+h5{
+    font-size: 16pt;
+    font-weight: 300;
+}
+
+h6{
+    font-size: 0.75em;
+}
+
+span {
+    font-family: 'Assassin$';
+    font-size: 3em;
+}
+
+span.ASB {
+    display: block;
+    font-family: 'Assassin$';
+    font-size: 24pt;
+    margin-bottom: -1em;
+}
+
+span.ASBcollection {
+    display: block;
+    font-family: 'Assassin$';
+    font-size: 16pt;   
+    margin-bottom: .5em;
+}
+
+a > li{
+    color: #FFF;
+}
+
+body {
+    background-color: rgba(95, 0, 16, 1);
+}
+
+/*Header markup*/
+header {
+    background-color: #5f0010;
+    border-bottom: .1em solid #969696;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    height: 8vh;
+    padding-left: 1em;
+    position: absolute;
+    width: 100vw;
+}
+
+header.mapMenu {
+    margin-top: -100vh;
+}
+
+header > img {
+    float: right;
+    height: 4vh;
+    margin: 2vh .75em 2vh 0;
+    width: 1.5em;
+}
+
+header > nav {
+    background-color: rgba(95, 0, 16, 0.8);
+    border-left: .1px solid #FFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 92vh;
+    margin-left: 100vw;
+    min-width: 8em;
+    top: 0;
+    width: 40vw;
+}
+
+header > nav > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: right;
+    width: 100%;
+}
+
+header > nav > ul > a > li {
+    border-bottom: .1px solid #FFF;
+    padding: .5em 1em .5em 0;
+}
+
+header > nav > ul > a > li {
+    font-family: 'Assassin$';
+    font-size: 1.5em;
+}
+
+header > nav > ul > a:active,
+header > nav > ul > a:active > li{
+    background-color: darkred;
+    color: #FFFFFF;
+}
+
+/*Add and remove class for responsive menu*/
+.hidden {
+    display: none;
+}
+
+.active {
+    display: inline-block;
+    margin-left: auto;
+    transition: all 2s;
+}
+
+.lock {
+        background-color: rgba(135, 30, 16, 1);
+}
+
+/*Markup of the Google Maps API*/
+#map_canvas {
+    height: 92vh;
+    margin-top: 8vh;
+    width: 100vw;
+    z-index: -2;
+}
+
+/*Main markup*/
+main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+main > p {
+    margin: 1em .5em 0 .5em;
+}
+
+main > p:first-of-type {
+    margin: 2.5em .5em 1em .5em;
+}
+
+/*Button markup*/
+main > a.button > img{
+    height: auto;
+    margin: 29em 4vw 1em 4vw;
+    position: fixed;
+    top:0;
+    width: 92vw;
+    z-index: -1;
+}
+
+/*Background image*/
+img.background {
+    background-image: url(../img/background_popup.png);
+    background-size: 100%;
+    height: 123vh;
+    margin-top: -23vh;
+    position: fixed;
+    top: 8em;
+    width: 100vw;
+    z-index: -2;
+}
+
+/*Markup connect page, button*/
+img.connect {
+    height: 3em;
+    margin: -.2em 0 -.6em 0;
+    width: 3em;
+}
+
+img.map {
+    height: 4em;
+    margin: 65vh 0 0 0;
+    opacity: 0.7;
+    width: 18em;
+}
+
+a.map2 {
+    margin-top: -85vh;
+    margin-left: 5vw;
+    opacity: 0.7;
+    width: 8em;
+}
+
+a.map2 > img {
+    height: 2.2em;
+    width: 8em;
+    width: 8em;
+}
+
+header.popup {
+    margin-top:-100vh;
+}
+
+main.popup {
+    background-image: url(../img/background_popup.png);
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
+    height: auto;
+    margin: -87vh 7.5vw 6vh 7.5vw;
+    width: 85vw;
+}
+
+main.popup > p {
+    margin: 0.8em;
+}
+
+main.popup > p > a > img {
+    width: 75vw;
+}
+
+img.small {
+    height: 40vh;
+    margin-left: 5vw;
+    width: 60vw;
+}
+
+img.puzzle {
+    height: auto;
+    width: 100vw;
+}
+
+main > article {
+    margin: 1.5em 1em 1.5em 1em;
+}
+
+main > article > section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: .5em 0 2.5em 0;
+}
+
+main > article > section > h4{
+    width: 100vw;
+}
+
+main > article > section > h5 {
+    margin: 0.5em 0 .5em 0;
+    width: 70%;
+}
+
+main > article > section > img {
+    -webkit-align-content: flex-end;
+    -moz-align-content: flex-end;
+    -ms-align-content: flex-end;
+    align-content: flex-end;
+    height: 2em;
+    margin-left: 1em;
+    width: 2em;
+}
+
+main > form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 1em 1em 0 1em;
+    width: 100vw;
+}
+
+main > form > p {
+    margin-top: .5em;
+    width: 100vw;
+}
+
+main > form > p > input {
+    margin-right: 1.5em;
+}
+
+main > form > input {
+    -webkit-align-content: flex-end;
+    -moz-align-content: flex-end;
+    -ms-align-content: flex-end;
+    align-content: flex-end;
+    width: 40vw;
+}
+
+main > form:nth-of-type(2) > h5{
+    width: 50vw;
+}
+
+main > form:nth-of-type(2) > p {
+    -webkit-align-content: flex-end;
+    -moz-align-content: flex-end;
+    -ms-align-content: flex-end;
+    align-content: flex-end;
+    margin-top: 1.5em;
+    width: 40vw;
+}
+
+main > form > button {
+    color: black;
+}
+
+@media screen and (min-width: 760px) {
+
+    span.ASB{
+        font-size: 32pt;
+    }
+
+    /*Header markup*/
+    header {
+        height: 6vh;
+        padding-top: .5em;
+    }
+    
+    header > img#menu {
+        height: 2em;
+        margin-top: .5em;
+        margin-right: 4vw;
+        margin-left: 50vw;
+        padding-top: -.5em;
+        width: 4.5vw;
+    }
+
+    /*Markup of the Google Maps API*/
+    #map_canvas {
+        height: 94vh;
+        margin-top: 6vh;
+    }
+
+    header > nav {
+        background-color: rgba(95, 0, 16, 0.8);
+        border-left: .1px solid #FFF;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 93vh;
+        margin-left: 100vw;
+        min-width: 8em;
+        top: 0;
+        width: 40vw;
+
+    }
+
+    main > p {
+        margin: 1.5em 2.5em 0 2.5em;
+    }
+
+    main > p:first-of-type {
+        margin: 4.5em 2.5em 1em 2.5em;
+    }
+
+    main > article {
+        margin: 2.5em 2.5em 2.5em 1.5em;
+    }
+
+    main > article > section {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 1em 2.5em 2.5em 2em;
+    }
+
+    main > article > section > h4{
+        width: 100vw;
+    }
+
+    main > article > section > h5 {
+        margin: 0.5em 0 .5em 0;
+        width: 60vw;
+    }
+
+    main > article > section > img {
+        -webkit-align-content: flex-end;
+        -moz-align-content: flex-end;
+        -ms-align-content: flex-end;
+        align-content: flex-end;
+        height: 2em;
+        margin-left: 1em;
+        width: 2em;
+    }
+
+    /*Button markup*/
+    main > a.button > img{
+        margin: 80vh 15vw 4em 15vw;
+        width: 70vw;
+    }
+
+    /*Background image*/
+    img.background {
+        background-image: url(../img/background_tablet.png);
+        margin-top: -8vh;
+    }
+
+    main > form {
+        margin: 1em 0 0 3em;
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+
+    h2 {
+        font-size: 36pt;
+        margin-left: 1em;
+    }
+    
+    /*Header markup*/
+    header {
+        height: 10vh;
+        padding: 0;
+        width: 100vw;
+    }
+
+    header > img {
+        display: none;
+    }
+
+    header > nav {
+        background-color: rgba(95, 0, 16, 1);
+        border: none;
+        height: 90vh;
+        margin-top: 10vh;
+        min-width: 15em;
+        width: 15vw;
+    }
+    
+    header > nav > ul {
+        margin-top: 5em;
+    }
+
+    header > nav > ul > a > li:first-of-type {
+        border-top: .1px solid #FFF;
+    }
+
+    /*Markup of the Google Maps API*/
+    #map_canvas {
+        height: 100vh;
+        margin-top:0;
+        width: 85vw;
+        z-index: -2;
+    }
+
+    /*Main markup*/
+    /*main {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    main > p {
+        margin: 1em .5em 0 .5em;
+    }
+
+    main > p:first-of-type {
+        margin: 2.5em .5em 1em .5em;
+    }
+
+    /*Button markup*/
+    /*main > a.button > img{
+        bottom: 0;
+        height: auto;
+        margin: 10em 4vw 1em 4vw;
+        position: fixed;
+        width: 92vw;
+        z-index: -1;
+    }
+
+    /*Background image*/
+    img.background {
+        background-size: 100% 110%;
+        height: 100vh;
+        margin-left:0;
+        width: 85vw;
+    }
+
+    /*Markup connect page, button*/
+    /*img.connect {
+        height: 3em;
+        margin: -.2em 0 -.6em 0;
+        width: 3em;
+    }
+
+    img.map {
+        height: 4em;
+        margin: 65vh 0 0 0;
+        opacity: 0.7;
+        width: 18em;
+    }
+
+    a.map2 {
+        margin-top: -85vh;
+        margin-left: 5vw;
+        opacity: 0.7;
+        width: 8em;
+    }
+
+    a.map2 > img {
+        height: 2.2em;
+        width: 8em;
+        width: 8em;
+    }
+
+    header.popup {
+        margin-top:-100vh;
+    }
+
+    main.popup {
+        background-image: url(../img/background_popup.png);
+        background-size: 100% 100%;
+        -webkit-box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
+        height: auto;
+        margin: -87vh 7.5vw 6vh 7.5vw;
+        width: 85vw;
+    }
+
+    main.popup > p {
+        margin: 0.8em;
+    }
+
+    main.popup > p > a > img {
+        width: 75vw;
+    }
+
+    img.small {
+        height: 40vh;
+        margin-left: 5vw;
+        width: 60vw;
+    }
+
+    img.puzzle {
+        height: auto;
+        width: 100vw;
+    }*/
+}

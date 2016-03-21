@@ -1,0 +1,46 @@
+{
+    "googleMapsKey": "AIzaSyBnyib0uElbs0LNFobHjWhQMyTq-hiStEg",
+    "tourType": "SANDBOX",
+    "mapOptions": {
+        "center": [52.35955620231157, 4.908019635968003],
+        "zoom": 16,
+        "disableDefaultUI": true,
+        "draggable": true,
+        "scrollwheel": true,
+        "mapTypeControl": false,
+        "navigationControl": false,
+        "mapTypeId": "ROADMAP",
+        "styles":[]
+    },
+    "poiMarker": {
+        "path": "CIRCLE",
+        "fillColor": "darkred",
+        "fillOpacity": 0.4,
+        "strokeColor": "darkred",
+        "strokeOpacity": 0.4,
+        "strokeWeight": 1,
+        "scale": 30
+    },
+    "posMarker": {
+        "path": "BACKWARD_CLOSED_ARROW",
+        "fillColor": "FireBrick",
+        "fillOpacity": 0.4,
+        "strokeColor": "Black",
+        "strokeOpacity": 1,
+        "strokeWeight": 1,
+        "scale": 3
+    },
+    "poiList":[
+        {
+            "name": "Domtoren",
+            "description": "",
+            "coordinate": {
+                "latitude": 52.359309, 
+                "longitude": 4.908991 
+            },
+            "radius": 30,
+            "onEnter":"punt1.html",
+            "onExit":"map.html"
+        }
+    ]
+}
