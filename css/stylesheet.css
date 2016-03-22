@@ -352,6 +352,7 @@ main > form > input {
     -moz-align-content: flex-end;
     -ms-align-content: flex-end;
     align-content: flex-end;
+    color: black;   
     width: 40vw;
 }
 
@@ -380,6 +381,7 @@ main > form > button {
 
     /*Header markup*/
     header {
+        border-bottom: none;
         height: 6vh;
         padding-top: .5em;
     }
@@ -480,14 +482,27 @@ main > form > button {
 }
 
 @media screen and (min-width: 1030px) {
+    /* Text markup; size/wieght*/
+    p{
+        font-size: 20pt;
+    }
+
+    span.ASB {
+        font-size: 44pt;
+    }
+
+    a > li{
+        font-size: 24pt;
+    }
 
     h2 {
-        font-size: 36pt;
-        margin-left: 1em;
+        font-size: 54pt;
+        margin-left: 2em;
     }
     
     /*Header markup*/
     header {
+        border-bottom: .1em solid #969696;
         height: 10vh;
         padding: 0;
         width: 100vw;
@@ -500,10 +515,10 @@ main > form > button {
     header > nav {
         background-color: rgba(95, 0, 16, 1);
         border: none;
-        height: 90vh;
+        height: auto;
         margin-top: 10vh;
-        min-width: 15em;
-        width: 15vw;
+        min-width: 16em;
+        width: 25vw;
     }
     
     header > nav > ul {
@@ -514,110 +529,145 @@ main > form > button {
         border-top: .1px solid #FFF;
     }
 
+    header > nav > ul > a > li {
+        font-size: 28pt;
+    }
+
     /*Markup of the Google Maps API*/
     #map_canvas {
         height: 100vh;
         margin-top:0;
-        width: 85vw;
+        width: 75vw;
         z-index: -2;
     }
 
     /*Main markup*/
-    /*main {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
+    main {
+        width: 75vw;
     }
 
-    main > p {
-        margin: 1em .5em 0 .5em;
+   main > p {
+        margin: 1em .5em 0 5.5em;
     }
 
     main > p:first-of-type {
-        margin: 2.5em .5em 1em .5em;
+        margin: 6.5em .5em 1em 5em;
     }
 
     /*Button markup*/
-    /*main > a.button > img{
-        bottom: 0;
-        height: auto;
-        margin: 10em 4vw 1em 4vw;
-        position: fixed;
-        width: 92vw;
-        z-index: -1;
+    main > a.button > img{
+        margin: 30em 0 0 9.3em;
+        width: 25vw;
     }
 
     /*Background image*/
     img.background {
+        background-image: url(../img/background_desktop.png);
         background-size: 100% 110%;
         height: 100vh;
         margin-left:0;
-        width: 85vw;
-    }
-
-    /*Markup connect page, button*/
-    /*img.connect {
-        height: 3em;
-        margin: -.2em 0 -.6em 0;
-        width: 3em;
+        width: 75vw;
     }
 
     img.map {
-        height: 4em;
-        margin: 65vh 0 0 0;
-        opacity: 0.7;
-        width: 18em;
+        height: 6em;
+        margin: 55vh 0 0 0;
+        width: 25em;
     }
 
     a.map2 {
         margin-top: -85vh;
         margin-left: 5vw;
         opacity: 0.7;
-        width: 8em;
+        width: 12em;
     }
 
     a.map2 > img {
-        height: 2.2em;
-        width: 8em;
-        width: 8em;
+        height: 3.5em;
+        width: 12em;
     }
 
-    header.popup {
-        margin-top:-100vh;
+    img.puzzle {
+        height: auto;
+        margin: 1em 0 0 9.3em;
+        width: 35vw;
     }
 
     main.popup {
-        background-image: url(../img/background_popup.png);
-        background-size: 100% 100%;
-        -webkit-box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.75);
         height: auto;
-        margin: -87vh 7.5vw 6vh 7.5vw;
-        width: 85vw;
+        margin: -87vh 12.5vw 6vh 12.5vw;
+        width: 50vw;
     }
 
     main.popup > p {
-        margin: 0.8em;
+        margin: 1em;
     }
 
     main.popup > p > a > img {
-        width: 75vw;
+        margin: 0 auto;
+        width: 25vw;
     }
 
     img.small {
         height: 40vh;
         margin-left: 5vw;
-        width: 60vw;
+        width: 40vw;
     }
 
     img.puzzle {
         height: auto;
-        width: 100vw;
-    }*/
+        width: 50vw;
+    }
+
+    main > article {
+        margin: 2.5em 1em 1.5em 7em;
+    }
+
+    main > article > section > h5 {
+        margin: 0.5em 0 .5em 0;
+        width: 40%;
+    }
+
+    main > article > section > img {
+        -webkit-align-content: flex-end;
+        -moz-align-content: flex-end;
+        -ms-align-content: flex-end;
+        align-content: flex-end;
+        height: 2em;
+        margin-left: 1em;
+        margin-right: 20vw;
+        width: 2em;
+    }
+
+    main > form {
+        margin: 2.5em 1em 0 9em;
+        width: 50vw;
+    }
+
+    main > form > p {
+        margin-top: .5em;
+        width: 50vw;
+    }
+
+    main > form > input {
+        font-size: 20pt;
+        width: 25vw;
+    }
+
+    main > form:nth-of-type(2) > h5{
+        width: 18vw;
+    }
+
+    main > form:nth-of-type(2) > p {
+        -webkit-align-content: flex-end;
+        -moz-align-content: flex-end;
+        -ms-align-content: flex-end;
+        align-content: flex-end;
+        margin-top: 1.5em;
+        width: 40vw;
+    }
+
+    main > form > button {
+        color: black;
+    }
 }
